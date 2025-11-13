@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html>                                                                                                                                                                                                             98% 
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
@@ -6,8 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
+    <style>
+        .badge {
+            position: absolute;
+            left: 1rem; top: 1rem;
+            padding: .4rem .8rem;
+            background: radial-gradient(circle at 30% 30%, #ffff00, #ff00ff 70%);
+            color: #000;
+            font: 900 1rem/1.2 "Comic Sans MS", cursive;
+            border: 4px groove #fff;
+            box-shadow: 0 0 10px #fff, 0 0 20px #ff0, 0 0 30px #0ff;
+            transform: rotate(-6deg) scale(1.05);
+            text-transform: uppercase;
+            z-index: 10;
+            animation: blink .8s steps(2,end) infinite, wiggle 1.2s ease-in-out infinite alternate;
+        }
+        .badge b { color: #fff; text-shadow: 0 0 6px #f0f, 0 0 12px #0ff; }
+        .badge.error {
+            background: radial-gradient(circle at 30% 30%, #ffcccc, #ff0033 70%);
+            color: #fff;
+            border-color: #000;
+            transform: rotate(4deg) scale(1.05);
+        }
+        .badge .small { display:block; font-weight:700; font-size:.8rem; text-transform:none; }
+    </style>
 </head>
 <body>
+<div class="badge" aria-live="polite" aria-atomic="true">
+    Visites: <b>1</b>
+</div>
+
 <main>
     <section class="hero" aria-label="Titre principal">
         <h1>MAGIC <br>BERTRAND</h1>
