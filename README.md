@@ -1,4 +1,4 @@
-# MagicBertrand (PHP 8.5 + SQLite)
+# MagicBertrand (PHP 8.4 + SQLite)
 
 Site Non Officiel du magicien « Magic Bertrand ».
 
@@ -13,7 +13,7 @@ De la vidéo [LES 624 TYPES DE PROFS ! (Feat. Monsieur Frisé) - CHAISE](https:/
 - Compteur de visites persistant en base SQLite, incrémenté à chaque hit.
 
 ## Prérequis
-- PHP 8.5 (ou 8.x) avec l’extension `SQLite3` activée.
+- PHP 8.4 (ou 8.x) avec l’extension `SQLite3` activée.
 - Accès en écriture au dossier `data/` à la racine du projet (créé automatiquement). À défaut, un fallback utilise le dossier temporaire du système (`/tmp`).
 
 ## Structure du projet
