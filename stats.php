@@ -2,16 +2,14 @@
 declare(strict_types=1);
 require 'autoloader.php';
 
-use lib\Utils;
 use lib\Databases;
 
 $unique_visit = 0;
 $total_visit = 0;
 $error = null;
 try {
-    Databases::increment_unique_visit_count(Utils::hkey());
     $unique_visit = Databases::get_unique_visit_count();
-    $total_visit = Databases::increment_visit_count();
+    $total_visit = Databases::get_unique_visit_sum();
 
 } catch (Throwable $e) {
     // Si SQLite n'est pas dispo, on évite de casser l'affichage

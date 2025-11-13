@@ -11,13 +11,18 @@ use lib\Databases;
 $count = 0;
 $error = null;
 try {
-//    $count = Databases::increment_visit_count();
     Databases::increment_unique_visit_count(Utils::hkey());
     $count = Databases::get_unique_visit_count();
 } catch (Throwable $e) {
     // Si SQLite n'est pas dispo, on évite de casser l'affichage
     $count = -1; // indicateur d'erreur
     $error = $e->getMessage();
+}
+
+try {
+    Databases::increment_visit_count();
+} catch (Throwable $e) {
+    // Ignorer les erreurs d'incrémentation totale
 }
 
 ?>

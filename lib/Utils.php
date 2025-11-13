@@ -41,6 +41,6 @@ class Utils
 
     public static function hkey(): string
     {
-        return hash('sha3-512', self::getClientIp());
+        return hash('sha3-512', self::getClientIp() ?? '');
     }
 }

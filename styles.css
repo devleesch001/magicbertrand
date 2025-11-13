@@ -187,7 +187,7 @@ main {
 }
 
 .badge-animated {
-    animation: blink .8s steps(2, end) infinite, wiggle 1.2s ease-in-out infinite alternate, rainbow 3.5s linear infinite;
+    animation: wiggle 1.2s ease-in-out infinite alternate, rainbow 3.5s linear infinite;
 }
 
 .badge b {
