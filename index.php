@@ -43,6 +43,22 @@ try {
         transform: rotate(4deg) scale(1.05);
       }
       .badge .small { display:block; font-weight:700; font-size:.8rem; text-transform:none; }
+      .gh-btn {
+        position: absolute;
+        top: 1rem; right: 1rem;
+        padding: .4rem .8rem;
+        background: radial-gradient(circle at 30% 30%, #00ff00, #00ffff 70%);
+        color: #000;
+        font: 900 1rem/1.2 "Comic Sans MS", cursive;
+        border: 4px groove #fff;
+        box-shadow: 0 0 10px #fff, 0 0 20px #0f0, 0 0 30px #0ff;
+        text-transform: uppercase;
+        z-index: 10;
+        transition: transform .2s;
+      }
+      .gh-btn:hover {
+        transform: scale(1.1);
+      }
     </style>
 </head>
 <body>
@@ -56,6 +72,8 @@ try {
     Visites: <b><?php echo htmlspecialchars((string)$count, ENT_QUOTES, 'UTF-8'); ?></b>
   </div>
 <?php endif; ?>
+
+<a class="gh-btn" href="https://github.com/devleesch001/magicbertrand" target="_blank" rel="noopener noreferrer" aria-label="Ouvrir GitHub dans un nouvel onglet">★ GitHub ★</a>
 
 <main>
     <section class="hero" aria-label="Titre principal">
