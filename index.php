@@ -20,13 +20,26 @@ try {
     $error = $e->getMessage();
 }
 
-?><!DOCTYPE html>
+?>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Magic Bertrand - Méga Kitsch</title>
+    <title>Magic Bertrand - Unofficial</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.ico">
+
+    <meta property="og:type" content="image/webp">
+    <meta property="og:title" content="Magic Bertrand - Unofficial">
+    <meta property="og:description" content="Le site non-officiel de Magic Bertrand">
+    <meta property="og:url" content="https://magicbertrand.org/">
+    <meta property="og:image" content="https://magicbertrand.org/assets/magicbertrand.webp">
+    <meta property="og:image:secure_url" content="https://magicbertrand.org/assets/magicbertrand.webp">
+    <meta property="twitter:title" content="Magic Bertrand - Unofficial">
+    <meta property="twitter:description" content="Le site non-officiel de Magic Bertrand">
+    <meta property="twitter:url" content="https://magicbertrand.org/">
+    <meta property="twitter:image" content="https://magicbertrand.org/assets/magicbertrand.webp">
 </head>
 <body>
 <?php if ($error): ?>
